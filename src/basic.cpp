@@ -3,6 +3,7 @@
 void LoadImages(const string &strPathLeft, const string &strPathRight,
                 const string &strPathSeq, vector<string> &vstrImageLeft,
                 vector<string> &vstrImageRight) {
+    
     ifstream fTimes;
     fTimes.open(strPathSeq.c_str());
     vstrImageLeft.reserve(5000);
@@ -18,4 +19,5 @@ void LoadImages(const string &strPathLeft, const string &strPathRight,
             vstrImageRight.push_back(strPathRight + "/" + ss.str() + ".png");
         }
     }
+    */
 }
