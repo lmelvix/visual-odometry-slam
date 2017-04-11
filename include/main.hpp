@@ -20,9 +20,9 @@
  #include "draw.hpp"
  #include "basic.hpp"
 
- #define LEFT_IMAGE "../data/dataset/sequence/08/image_0/"
- #define RIGHT_IMAGE "../data/dataset/sequence/08/image_1/"
- #define STEREO "../include/stereo252.txt"
+ #define LEFT_IMAGE "/home/lmelvix/projects/visual-odometry-slam/data/dataset/sequences/08/image_0"
+ #define RIGHT_IMAGE "/home/lmelvix/projects/visual-odometry-slam/data/dataset/sequences/08/image_1"
+ #define STEREO "/home/lmelvix/projects/visual-odometry-slam/include/stereo252.txt"
 
  using namespace cv;
  using namespace std;

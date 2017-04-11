@@ -13,7 +13,7 @@ int main(int argc, const char * argv[]) {
     std::cout<<STEREO<<std::endl;
 
     LoadImages(leftImgPath, rightImgPath, seqPath, leftImgName, rightImgName);
-    /*
+    
     Mat test1 = imread(leftImgName[0]);
     STEREO_RECTIFY_PARAMS srp;
     srp.P1 = (
@@ -52,7 +52,7 @@ int main(int argc, const char * argv[]) {
         }
     count++;
     }
-    */   
+       
     waitKey(0);
     return 0;
 }
