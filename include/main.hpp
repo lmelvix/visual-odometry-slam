@@ -13,8 +13,10 @@
  #include <opencv2/video/video.hpp>
  
  #include <boost/thread.hpp>
- 
- #include "optFlwTrack.hpp"
+
+ #include <Eigen/Core>
+ #include <Eigen/Geometry>
+
  #include "keyframe.hpp"
  #include "frame.hpp"
  #include "draw.hpp"
@@ -23,7 +25,18 @@
  #define LEFT_IMAGE "/home/lmelvix/projects/visual-odometry-slam/data/dataset/sequences/08/image_0"
  #define RIGHT_IMAGE "/home/lmelvix/projects/visual-odometry-slam/data/dataset/sequences/08/image_1"
  #define STEREO "/home/lmelvix/projects/visual-odometry-slam/include/stereo252.txt"
+ #define matched 1
+ #define unmatched 0
 
  using namespace cv;
  using namespace std;
-
+  
+ struct STEREO_RECTIFY_PARAMS{ 
+     Mat P1, P2; 
+     Mat R1, R2; 
+     Mat Q; 
+     Mat map11, map12; 
+     Mat map21, map22; 
+     Point2f leftup; 
+     Point2f rightbottom; 
+ };

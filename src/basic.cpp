@@ -15,7 +15,6 @@ void LoadImages(const string &strPathLeft, const string &strPathRight,
         {
             stringstream ss;
             ss << s;
-            std::cout<<ss.str()<<std::endl;
             vstrImageLeft.push_back(strPathLeft + "/" + ss.str() + ".png");
             vstrImageRight.push_back(strPathRight + "/" + ss.str() + ".png");
         }

@@ -16,6 +16,8 @@ int main(int argc, const char * argv[]) {
     
     Mat test1 = imread(leftImgName[0]);
     STEREO_RECTIFY_PARAMS srp;
+    
+    // Initialized from given configuration file 
     srp.P1 = (
               Mat_<float>(3,4) << 707.0912, 0.0,      601.8873, 0.0,
                                   0.0 ,     707.0912, 183.1104, 0.0,
@@ -30,9 +32,6 @@ int main(int argc, const char * argv[]) {
     // parameter setup
     vector<Keyframe> keyframe;
     
-    //triangulation
-    Mat homoPts3D, inhomoPts3D; //used to store homogeneous 3D points, each column
-    Mat inhomo;                 //represents a point
     int count = 1;
     float featureRatio = 0;
     
